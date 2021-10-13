@@ -160,7 +160,7 @@ class EventsFilter extends BaseEntityFilter implements HasPagesInterface
      * @param array|int|null $createdAt
      * @return EventsFilter
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt($createdAt): EventsFilter
     {
         //todo support for range filter
         if (!is_array($createdAt)) {
@@ -184,7 +184,7 @@ class EventsFilter extends BaseEntityFilter implements HasPagesInterface
      * @param array|int|null $createdBy
      * @return EventsFilter
      */
-    public function setCreatedBy($createdBy)
+    public function setCreatedBy($createdBy): EventsFilter
     {
         $this->createdBy = $this->parseArrayOrNumberFilter($createdBy);
 
@@ -203,7 +203,7 @@ class EventsFilter extends BaseEntityFilter implements HasPagesInterface
      * @param array|int|null $entityIds
      * @return EventsFilter
      */
-    public function setEntityIds($entityIds)
+    public function setEntityIds($entityIds): EventsFilter
     {
         $this->entityIds = $entityIds;
 
