@@ -628,6 +628,17 @@ class LeadModel extends BaseApiModel implements
     }
 
     /**
+     * @return ContactModel|null
+     */
+    public function getMainContact(): ?ContactModel
+    {
+        if($this->contacts) {
+            return $this->contacts->getBy('isMain', true);
+        }
+        return null;
+    }
+
+    /**
      * @param null|ContactsCollection $contacts
      *
      * @return self
